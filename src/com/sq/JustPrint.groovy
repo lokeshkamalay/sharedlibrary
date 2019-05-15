@@ -6,6 +6,7 @@ def lower(name){
             println(name.toString().toLowerCase());
       //  }
     }catch(err){
+        println err.toString()
         echo "Failed to print the name, pls retry!"
     }
 }
