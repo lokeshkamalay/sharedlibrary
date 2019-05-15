@@ -4,14 +4,14 @@ def call(Map config) {
     
     def var = new com.sq.MyMaven()
     
-    def maven = "mvn"
+    def mavenvar = "mvn"
     if (config.clean == 'true'){
-      maven = maven + ' clean'
+      mavenvar = mavenvar + ' clean'
     }
-    maven = maven + ' ' + config.goal
+    mavenvar = mavenvar + ' ' + config.goal
     if (config.sonar == 'true'){
-      maven = maven + ' sonar:sonar '
-    var.maven(maven)
+      mavenvar = mavenvar + ' sonar:sonar '
+    var.maven(mavenvar)
     }
 }  
     
