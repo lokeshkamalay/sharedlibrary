@@ -6,7 +6,7 @@ def call(body) {
     body.delegate = config
     body()
 
-    def var = com.sq.JustPrint()
+    def var = new com.sq.JustPrint()
     if(config.mode == 'lower' || config.mode == 'Lower'){
         var.lower(config.name)
     }
