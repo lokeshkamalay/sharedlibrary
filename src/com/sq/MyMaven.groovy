@@ -2,6 +2,11 @@
 package com.sq
 
 def maven(maven){
-  sh "echo ${maven}"
+  try{
+    sh "echo ${maven}"
+  }catch(err) {
+    echo "Resulted in error"
+    println err.toString()
+  }
 }  
     
