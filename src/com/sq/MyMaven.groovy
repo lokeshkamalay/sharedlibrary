@@ -3,8 +3,7 @@ package com.sq
 
 def maven(maven){
   try{
-    echo "Inside shared library"
-    sh "${maven}"
+    sh "echo ${maven}"
   }catch(err) {
     echo "Resulted in error"
     println err.toString()
