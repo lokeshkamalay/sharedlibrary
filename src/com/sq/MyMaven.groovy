@@ -1,9 +1,9 @@
 #!/usr/bin/groovy
 package com.sq
 
-def maven(maven){
+def maven(mavenvar){
   try{
-    sh "echo ${maven}"
+    sh "echo ${mavenvar}"
   }catch(err) {
     echo "Resulted in error"
     println err.toString()
