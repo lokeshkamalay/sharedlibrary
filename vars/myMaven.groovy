@@ -11,7 +11,7 @@ def call(Map config) {
     mavenvar = mavenvar + ' ' + config.goal
     if (config.sonar == 'true'){
       mavenvar = mavenvar + ' sonar:sonar '
-    var.maven(mavenvar)
     }
+    var.maven(mavenvar)
 }  
     
