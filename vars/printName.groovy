@@ -1,11 +1,6 @@
 #!/usr/bin/groovy
 
-def call(body) {
-    def config = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = config
-    body()
-
+def call(Map config) {
     def var = new com.sq.JustPrint()
     if(config.mode == 'lower' || config.mode == 'Lower'){
         var.lower(config.name)
